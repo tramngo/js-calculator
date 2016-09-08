@@ -18,6 +18,9 @@ function calculatorModule () {
    */
 
   calculator.load=function(x) {
+    if(typeof x !== 'number'){
+     throw new Error('Wrong data type you dummy');
+   }
     _total=x;
     return _total;
   };
@@ -38,6 +41,9 @@ calculator.getTotal=function() {
    */
 
 calculator.add=function(x) {
+  if(typeof x !== 'number'){
+     throw new Error('Wrong data type you dummy');
+   }
   _total += x;
 };
 
@@ -47,6 +53,9 @@ calculator.add=function(x) {
    */
 
 calculator.subtract=function(x) {
+  if(typeof x !== 'number'){
+     throw new Error('Wrong data type you dummy');
+   }
   _total -= x;
 };
 
@@ -56,6 +65,9 @@ calculator.subtract=function(x) {
    */
 
 calculator.multiply=function(x) {
+  if(typeof x !== 'number'){
+     throw new Error('Wrong data type you dummy');
+   }
   _total *=x;
 };
 
@@ -65,6 +77,9 @@ calculator.multiply=function(x) {
    */
 
 calculator.divide=function(x) {
+  if(typeof x !== 'number'){
+     throw new Error('Wrong data type you dummy');
+   }
   _total /=x;
 };
 
@@ -96,10 +111,7 @@ calculator.clearMemory = function() {
   /**
    * Validation
    */
-calculator.validation = function(newName){
-   if(typeof newName !== 'number'){
-     throw new Error('Wrong data type you dummy');
-   }
-  };
+
+  
   return calculator;
 }
