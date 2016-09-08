@@ -6,6 +6,12 @@
  * @return {object} `calculator` object that can be used
  */
 
+function calculatorModule () {
+  var calculator = { };
+  var _memory = 0;
+  var _total = 0; 
+
+
 
   /**
    * sets the `total` to the number passed in
@@ -13,11 +19,19 @@
    * @return { Number }    current total
    */
 
+  calculator.load=function(x) {
+    _total=x;
+    return _total;
+  };
 
   /**
    * Return the value of `total`
    * @return { Number }
    */
+
+calculator.getTotal=function() {
+  return _total;
+};
 
 
   /**
@@ -63,3 +77,5 @@
    * Validation
    */
 
+   return calculator;
+}
